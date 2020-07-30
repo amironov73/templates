@@ -348,3 +348,24 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+
+# Doxygen
+doxygen/
+
+# library files
+*.a
+
+# CMake
+cmake-build-*/
+compile_commands.json
+*.dylib
+Makefile
+CMakeCache.txt
+*.cbp
+cmake_install.cmake
+CMakeFiles/
+*.tasks
+
+# JetBrains Rider
+.idea/
+*.sln.iml
