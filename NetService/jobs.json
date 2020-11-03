@@ -1,0 +1,20 @@
+﻿{
+  "jobs" : [
+    {
+      "name": "FirstJob",
+      "group": "Test",
+      "description": "First test job",
+      "enabled": true,
+      "type": "QuartzShelf.Jobs.FirstJob, QuartzShelf",
+      "cron": "0/5 * * * * ?"
+    },
+    {
+      "name": "SecondJob",
+      "group": "Test",
+      "description": "Second test job",
+      "enabled": true,
+      "type": "QuartzShelf.Jobs.SecondJob, QuartzShelf",
+      "cron": "0/2 * * * * ?"
+    }
+  ]
+}
