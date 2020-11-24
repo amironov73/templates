@@ -1,0 +1,10 @@
+{
+    "modules": [
+        {
+            "type": "ImplOne.FullSizeModule, ImplOne"
+        },
+        {
+            "type": "ImplTwo.ConciseModule, ImplTwo"
+        }
+    ]
+}
