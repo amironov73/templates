@@ -121,7 +121,7 @@ namespace ModernTcpServer
                     }
                     catch (InvalidOperationException)
                     {
-                        _logger.LogError("InvalidOperationException");
+                        _logger.LogError(nameof(InvalidOperationException));
                         
                         // Either tcpListener.Start wasn't called (a bug!)
                         // or the CancellationToken was cancelled before
@@ -136,7 +136,7 @@ namespace ModernTcpServer
                     }
                     catch (OperationCanceledException)
                     {
-                        _logger.LogInformation("OperationCanceledException");
+                        _logger.LogInformation(nameof(OperationCanceledException));
                         break;
                     }
                     catch (Exception exception)
@@ -146,6 +146,9 @@ namespace ModernTcpServer
                     }
                 }
             }
+
+            // прекращаем прослушивание сокета
+            _listener.Stop();
 
             _logger.LogInformation("Stopping");
             
