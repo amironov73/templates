@@ -1,2 +1,3 @@
-# templates
-Miscellaneous templates
+# Templates
+
+Набор шаблонов разнообразных приложений.
