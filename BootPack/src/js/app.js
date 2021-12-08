@@ -1,0 +1,6 @@
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './our'
+import './../css/styles.css'
+import './../img/arctic-fox.gif'
+import './../img/favicon.ico'
+import './../img/logo.png'
