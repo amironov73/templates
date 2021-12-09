@@ -2,7 +2,7 @@
   "name": "boot-pack",
   "version": "1.0.0",
   "description": "Шаблон проекта с Bootstrap и Webpack",
-  "main": ".src/app.js",
+  "main": ".src/js/app.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/amironov73/templates"
@@ -21,8 +21,9 @@
   "author": "Alexey Mironov <amironov73@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.4",
+    "copy-webpack-plugin": "^10.0.0",
     "css-loader": "^6.5.1",
-    "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "path": "^0.12.7",
     "style-loader": "^3.3.1",
