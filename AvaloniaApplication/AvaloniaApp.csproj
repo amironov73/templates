@@ -1,0 +1,72 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <!-- Отключаем централизованное управление пакетами -->
+    <PropertyGroup>
+        <ManagePackageVersionsCentrally>false</ManagePackageVersionsCentrally>
+    </PropertyGroup>
+
+    <PropertyGroup>
+        <OutputType>WinExe</OutputType>
+        <Nullable>enable</Nullable>
+        <TargetFramework>net8.0</TargetFramework>
+        <TrimMode>copyused</TrimMode>
+        <LangVersion>latest</LangVersion>
+        <Nullable>enable</Nullable>
+        <BuiltInComInteropSupport>true</BuiltInComInteropSupport>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <None Remove=".gitignore" />
+        <None Update="NLog.config">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+    <ItemGroup>
+        <!--This helps with theme dll-s trimming.
+        If you will publish your application in self-contained mode with p:PublishTrimmed=true and it will use Fluent theme Default theme will be trimmed from the output and vice versa.
+        https://github.com/AvaloniaUI/Avalonia/issues/5593 -->
+        <TrimmableAssembly Include="Avalonia.Themes.Fluent" />
+    </ItemGroup>
+
+    <PropertyGroup>
+        <AvaloniaVersion>11.1.4</AvaloniaVersion>
+        <AvaloniaStable>11.1.0</AvaloniaStable>
+        <MicrosoftVersion>8.0.1</MicrosoftVersion>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Avalonia" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="Avalonia.AvaloniaEdit" Version="$(AvaloniaStable)" />
+        <PackageReference Include="Avalonia.Controls.DataGrid" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="Avalonia.Controls.TreeDataGrid" Version="11.0.10" />
+        <PackageReference Include="Avalonia.Desktop" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="Avalonia.Diagnostics" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="Avalonia.Fonts.Inter" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="Avalonia.Markup.Xaml.Loader" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="Avalonia.ReactiveUI" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="Avalonia.Skia" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="Avalonia.ThemeManager" Version="11.1.0" />
+        <PackageReference Include="Avalonia.Themes.Fluent" Version="$(AvaloniaVersion)" />
+        <PackageReference Include="GridExtra.Avalonia" Version="0.9.1" />
+        <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="8.0.1" />
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.CommandLine" Version="8.0.0" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="$(MicrosoftVersion)" />
+        <PackageReference Include="Microsoft.Extensions.Configuration.UserSecrets" Version="$(MicrosoftVersion)" />
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="$(MicrosoftVersion)" />
+        <PackageReference Include="Microsoft.Extensions.Hosting" Version="$(MicrosoftVersion)" />
+        <PackageReference Include="Microsoft.Extensions.Localization" Version="8.0.10" />
+        <PackageReference Include="Microsoft.Extensions.Logging" Version="$(MicrosoftVersion)" />
+        <PackageReference Include="Microsoft.Extensions.Logging.Console" Version="$(MicrosoftVersion)" />
+        <PackageReference Include="Microsoft.Extensions.ObjectPool" Version="8.0.10" />
+        <PackageReference Include="Microsoft.Extensions.Options" Version="8.0.2" />
+        <PackageReference Include="NLog" Version="5.3.4" />
+        <PackageReference Include="NLog.Extensions.Logging" Version="5.3.14" />
+        <PackageReference Include="ReactiveHistory" Version="0.10.7" />
+        <PackageReference Include="ReactiveUI" Version="20.1.63" />
+        <PackageReference Include="ReactiveUI.Fody" Version="19.5.41" />
+        <PackageReference Include="SkiaSharp" Version="2.88.8" />
+    </ItemGroup>
+
+</Project>
