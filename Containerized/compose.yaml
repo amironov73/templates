@@ -1,0 +1,9 @@
+﻿services:
+  containerized:
+    image: amironov73/containerized
+    container_name: super-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
